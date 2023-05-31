@@ -807,8 +807,11 @@ export default function Landing({selector, all =false}) {
         </div>
       </footer>
       {/* <!-- End Footer --> */}
-
-
+ {/* <div id="preloader"></div> */}
+    <Link
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i    ></Link>
       
       {/* <!-- Template Main JS File --> */}
       <script type="text/babel" src="../js/main.js"></script>
