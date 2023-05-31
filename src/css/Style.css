@@ -138,10 +138,13 @@ h6 {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-decoration: none;
+  padding-left: 20px;
 }
 
 #header .logo a {
   color: #fff;
+  
 }
 
 #header .logo a span {
@@ -163,11 +166,11 @@ h6 {
   transition: 0.3s;
   font-size: 14px;
   display: inline-block;
-  border: 2px solid #ffc451;
+  border: 2px solid #ee8900;
 }
 
 .get-started-btn:hover {
-  background: #ffbb38;
+  background: #ee8900;
   color: #343a40;
 }
 
@@ -224,7 +227,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: #ffc451;
+  color: #ee8900;
 }
 
 .navbar .dropdown ul {
@@ -261,7 +264,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
-  background-color: #ffc451;
+  background-color: #ee8900;
 }
 
 .navbar .dropdown:hover > ul {
@@ -357,7 +360,7 @@ h6 {
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
   color: #151515;
-  background-color: #ffc451;
+  background-color: #ee8900;
 }
 
 .navbar-mobile .getstarted,
@@ -393,7 +396,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover > a {
-  background-color: #ffc451;
+  background-color: #ee8900;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
@@ -437,7 +440,7 @@ h6 {
 }
 
 #hero h1 span {
-  color: #ffc451;
+  color: #ee8900;
 }
 
 #hero h2 {

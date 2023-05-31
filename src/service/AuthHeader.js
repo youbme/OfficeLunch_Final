@@ -1,20 +1,15 @@
- 
- export default function AuthHeader(){
+export default function AuthHeader() {
+  const user = JSON.stringify(localStorage.getItem("user"));
 
-    const user = JSON.stringify( localStorage.getItem('user'));
-    // const token = user.token;
-    console.log(user)
-    // console.log(user.token)
-    if(user ){
-        return{
-            Authorization: 'Bearer ' +user,
-            // Cookie: 'JSESSIONID='+user
-        };
-    } else {
-  return {
-    
-  };
+  console.log(user);
+
+  if (user) {
+    return {
+      headers: {
+        Authorization: "Bearer " + user,
+      },
+    };
+  } else {
+    return {};
+  }
 }
-
- }
-

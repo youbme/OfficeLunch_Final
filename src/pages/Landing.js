@@ -1,36 +1,29 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/Style.css";
-import Gp from '../js/main'
-import AccessSytem from '../img/Accesssystem.png'
+import Gp from "../js/main";
 
-export default function Landing({selector, all =false}) {
+//importing images
+import AccessSytem from "../img/Accesssystem.png";
+import About from "../img/about.jpg";
+import team1 from "../img/team/team-1.jpg";
+import team2 from "../img/team/team-2.jpg";
+import team3 from "../img/team/team-3.jpg";
+import team4 from "../img/team/team-4.jpg";
 
-  const elementsRef = useRef([]);
-    useEffect(()=>{
-            
-      Gp();
+export default function Landing() {
+  useEffect(() => {
+    Gp();
+  }, []);
 
-      elementsRef.current = Array.from(document.querySelectorAll(selector));
-
-    },[selector])
-    
-    // if (all) {
-    //   return elementsRef.current.map((element, index) => (
-    //     <div key={index}>{element}</div>
-    //   ));
-    // } else {
-    //   return <div>{elementsRef.current[0]}</div>;
-    // }
-    
   return (
-   <>
+    <>
       <header id="header" className="fixed-top">
         <div className="container d-flex align-items-center justify-content-lg-between">
           <h1 className="logo me-auto me-lg-0">
-            <a href="index.html">
+            <Link to={"/"}>
               <img src={AccessSytem} alt="accesssytem" />
-            </a>
+            </Link>
           </h1>
           <nav id="navbar" className="navbar order-last order-lg-0">
             <ul>
@@ -64,7 +57,7 @@ export default function Landing({selector, all =false}) {
           </nav>
           {/* <!-- .navbar --> */}
 
-          <Link to={"/login"} className="get-started-btn scrollto">
+          <Link to={"/login"} className="get-started-btn">
             Login
           </Link>
         </div>
@@ -89,8 +82,6 @@ export default function Landing({selector, all =false}) {
               <h2>Software Development for Better Future</h2>
             </div>
           </div>
-
-          
         </div>
       </section>
       {/* <!-- End Hero --> */}
@@ -105,7 +96,7 @@ export default function Landing({selector, all =false}) {
                 data-aos="fade-left"
                 data-aos-delay="100"
               >
-                <img src="assets/img/about.jpg" className="img-fluid" alt="" />
+                <img src={About} className="img-fluid" alt="" />
               </div>
               <div
                 className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content"
@@ -441,11 +432,12 @@ export default function Landing({selector, all =false}) {
                 <div className="swiper-slide">
                   <div className="testimonial-item">
                     <img
-                      src="assets/img/testimonials/testimonials-1.jpg"
+                      src="img/testimonials/testimonials-1.jpg"
                       className="testimonial-img"
                       alt=""
                     />
-                    <h3>Saul Goodman</h3>
+                    <h3>Bibek Basnet</h3>
+
                     <h4>Ceo &amp; Founder</h4>
                     <p>
                       <i className="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -560,11 +552,7 @@ export default function Landing({selector, all =false}) {
               <div className="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div className="member" data-aos="fade-up" data-aos-delay="100">
                   <div className="member-img">
-                    <img
-                      src="assets/img/team/team-1.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src={team1} className="img-fluid" alt="asd" />
                     <div className="social">
                       <Link href="">
                         <i className="bi bi-twitter"></i>
@@ -591,9 +579,9 @@ export default function Landing({selector, all =false}) {
                 <div className="member" data-aos="fade-up" data-aos-delay="200">
                   <div className="member-img">
                     <img
-                      src="assets/img/team/team-2.jpg"
+                      src={team2}
                       className="img-fluid"
-                      alt=""
+                      alt="productmanager"
                     />
                     <div className="social">
                       <Link>
@@ -620,11 +608,7 @@ export default function Landing({selector, all =false}) {
               <div className="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div className="member" data-aos="fade-up" data-aos-delay="300">
                   <div className="member-img">
-                    <img
-                      src="assets/img/team/team-3.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src={team3} className="img-fluid" alt="team3" />
                     <div className="social">
                       <Link href="">
                         <i className="bi bi-twitter"></i>
@@ -650,11 +634,7 @@ export default function Landing({selector, all =false}) {
               <div className="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div className="member" data-aos="fade-up" data-aos-delay="400">
                   <div className="member-img">
-                    <img
-                      src="assets/img/team/team-4.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src={team4} className="img-fluid" alt="team4" />
                     <div className="social">
                       <Link href="">
                         <i className="bi bi-twitter"></i>
@@ -722,9 +702,9 @@ export default function Landing({selector, all =false}) {
 
               <div className="col-lg-8 mt-5 mt-lg-0">
                 <form
-                //   action="forms/contact.php"
-                //   method="post"
-                //   role="form"
+                  //   action="forms/contact.php"
+                  //   method="post"
+                  //   role="form"
                   className="php-email-form"
                 >
                   <div className="row">
@@ -802,20 +782,21 @@ export default function Landing({selector, all =false}) {
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ --> */}
-            Designed by <Link href="#">Hira Prajapati</Link>
+            Designed by <Link href="#">Aayush Gurung</Link>
           </div>
         </div>
       </footer>
       {/* <!-- End Footer --> */}
- {/* <div id="preloader"></div> */}
-    <Link
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i    ></Link>
-      
+      {/* <div id="preloader"></div> */}
+      <Link
+        href="#"
+        class="back-to-top d-flex align-items-center justify-content-center"
+      >
+        <i class="bi bi-arrow-up-short"></i>
+      </Link>
+
       {/* <!-- Template Main JS File --> */}
       <script type="text/babel" src="../js/main.js"></script>
     </>
-   
   );
 }

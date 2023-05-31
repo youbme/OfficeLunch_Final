@@ -1,15 +1,17 @@
 import React from 'react'
 import axios from 'axios';
 import AuthHeader from './AuthHeader';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useState } from 'react-router-dom';
 
 
-const API_URL ="http://192.168.1.66:2000/officeLunch/employees";
+const API_URL ="http://192.168.1.71:2000/officeLunch/employees";
 class authservice {
 
-
+    
     logindata(username,password){
-       
+
+
+
         return axios.post(API_URL + "/login",{
             username,
             password
@@ -19,14 +21,13 @@ class authservice {
             console.log(response.data);
             localStorage.setItem("user",response.data);
             localStorage.setItem("username",username);
-        
-           if(response.data != null){
-            return JSON.stringify(response.data)
-           }
-
+        console(response.data)
+           if(response.data !== null || response.data !== 'Username is invalid'){
+            return response.data
+           } 
           
         }).catch(error=>{
-            alert('Failed to Login In');
+            // alert('Failed to Login In');
             console.log(error);
         });
        
@@ -50,20 +51,13 @@ class authservice {
         }
     
         logout(){
-            return axios.post(API_URL + "/logout")
-            .then(response=>{
-                console.log(response.data);
-                return JSON.stringify(response.data);
-            }).catch(error=>{
-                console.log(error);
-            });
+            localStorage.clear();
         }
     
-             
+             ///post food prefernce
     
         postdata(username,foodPref){
-           
-           
+                      
             return axios.post(API_URL +"/enroll",{
                 username,
                 foodPref,
@@ -78,10 +72,29 @@ class authservice {
                 console.log(response.data);
                 // localStorage.setItem("user",response.data);
                 return JSON.stringify(response.data)
+              
+                
             }).catch(error=>{
                 console.log(error);
             });
             }
+
+            //get veg noveg count
+            getdata () {
+                           
+           return axios.get(API_URL + "/getall")
+           .then(response=>{
+            console.log(response.data)
+             return response
+            
+           }).catch(error=>{
+            console.log(error)
+            return error
+           })
+        }
+
+           
+             
     
 
 }

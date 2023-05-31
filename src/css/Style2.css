@@ -12,13 +12,57 @@
 :root {
     scroll-behavior: smooth;
   }
+  .signout-container {
+    /* Add your signout container styles here */
+    /* Example styles */
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signout-container .dropdown-menu {
+    /* Add your dropdown menu styles here */
+    /* Example styles */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .signout-container .dropdown-menu li {
+    /* Add your dropdown menu item styles here */
+    /* Example styles */
+    padding: 5px 10px;
+  }
+  
+  .signout-container .dropdown-menu li a {
+    /* Add your dropdown menu link styles here */
+    /* Example styles */
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .signout-container .dropdown-menu li a:hover {
+    /* Add your dropdown menu link hover styles here */
+    /* Example styles */
+    background-color: #f1f1f1;
+  }
   
   body {
     font-family: "Open Sans", sans-serif;
     background: #f6f9ff;
     color: #444444;
   }
+   #logo{
+    font-size: 20px;
+    text-decoration: none !important;
+    align-items: left;
   
+  }
   a {
     color: #4154f1;
     text-decoration: none;
@@ -47,6 +91,7 @@
     padding: 20px 30px;
     transition: all 0.3s;
     background: white;
+    
   }
   
   @media (max-width: 900px) {
@@ -233,9 +278,7 @@
   .card-body:hover{
     background-color:whitesmoke;
     color: black;
-    transition: font 1s ease-in-out;
-    font-size: 1.3rem;
-    
+
   }
   
   .card-header,
@@ -253,6 +296,10 @@
     color: #012970;
     font-family: "Poppins", sans-serif;
   }
+  .employeepreference{
+    text-align: center;
+    font-size: 22px;
+  }
   
   .card-title span {
     color: #899bbd;
@@ -262,6 +309,9 @@
   
   .card-body {
     padding: 0 20px 20px 20px;
+  }
+  .card-body p{
+    font-size: medium;
   }
   
   .card-img-overlay {
@@ -648,7 +698,7 @@
   
     #main,
     #footer {
-      margin-left: 300px;
+      /* margin-left: 300px; */
     }
   }
   
@@ -936,6 +986,7 @@
   }
   
   .dashboard .recent-sales .table thead {
+    
     background: #f6f6fe;
   }
   
@@ -962,6 +1013,7 @@
   
   .dashboard .top-selling .table thead th {
     border: 0;
+  
   }
   
   .dashboard .top-selling .table tbody td {
@@ -1245,4 +1297,31 @@
     text-align: center;
     font-size: 13px;
     color: #012970;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    
+  }
+    
+  .p-flex {
+    flex: 1;
+   
+  }
+
+  .food-warning{
+    border-radius: 5px;
+    background-color: #0dcaf0;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+    /* padding: 10px; */
+  }
+  tr{
+    font-size: 18px;
+    text-align: center;
   }

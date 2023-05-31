@@ -276,8 +276,8 @@ button:hover {
   font-size: 18px;
   color: #fff;
   width: 100%;
-  background: #fbbb92;
-  opacity: 0.5;
+  background: #ee8900;
+  opacity: 0.9;
   border: none;
   padding: 15px 20px;
   font-weight: 700;
@@ -290,8 +290,8 @@ button:hover {
 }
 
 .w3l-workinghny-form .btn-style:hover {
-  background: #fdb485;
-  transform: translateY(-3px);
+  background: #ee8900;
+  /* transform: translateY(-3px); */
   opacity: 1;
 }
 
