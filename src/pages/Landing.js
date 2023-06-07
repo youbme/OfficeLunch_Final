@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/Style.css";
 import Gp from "../js/main";
@@ -12,6 +12,8 @@ import team3 from "../img/team/team-3.jpg";
 import team4 from "../img/team/team-4.jpg";
 
 export default function Landing() {
+
+  const [isNavExpanded, setisNavExpanded] = useState(false);
   useEffect(() => {
     Gp();
   }, []);
@@ -25,7 +27,7 @@ export default function Landing() {
               <img src={AccessSytem} alt="accesssytem" />
             </Link>
           </h1>
-          <nav id="navbar" className="navbar order-last order-lg-0">
+          <nav id={"navbar" }className={isNavExpanded ? "navbar-mobile order-last order-lg-0": "navbar order-last order-lg-0"}>
             <ul>
               <li>
                 <a className="nav-link scrollto active" href="#hero">
@@ -53,7 +55,7 @@ export default function Landing() {
                 </a>
               </li>
             </ul>
-            <i className="bi bi-list mobile-nav-toggle"></i>
+            <i className=" bi-list mobile-nav-toggle" onClick={()=>setisNavExpanded(!isNavExpanded)}></i>
           </nav>
           {/* <!-- .navbar --> */}
 
@@ -788,12 +790,12 @@ export default function Landing() {
       </footer>
       {/* <!-- End Footer --> */}
       {/* <div id="preloader"></div> */}
-      <Link
-        href="#"
+      {/* <Link
+        href="/"
         class="back-to-top d-flex align-items-center justify-content-center"
       >
         <i class="bi bi-arrow-up-short"></i>
-      </Link>
+      </Link> */}
 
       {/* <!-- Template Main JS File --> */}
       <script type="text/babel" src="../js/main.js"></script>

@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 
-const API = "http://192.168.1.71:2000/officeLunch/employees";
+const API = process.env.REACT_APP_API_URL;
 
 export default function Login() {
 
@@ -44,7 +44,7 @@ const handleShow = () => setShow(true);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    // localStorage.setItem("token", 'asdfasfasdfas.sadfasd.fsadf.adf.asdf');
+    console.log(API)
 
     setLoading(true);
     axios
@@ -73,11 +73,11 @@ const handleShow = () => setShow(true);
       console.log("hello");
 
        
-      if(localStorage.getItem("user") !== null){
+      // if(localStorage.getItem("user") !== null){
       
-            navigate("/service")
-        window.location.reload();
-        } 
+      //       // navigate("/service")
+      //   // window.location.reload();
+      //   } 
         
   };
 

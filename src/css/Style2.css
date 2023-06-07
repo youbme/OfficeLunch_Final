@@ -9,6 +9,148 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+@media(max-width: 760px){
+  #servicefirstrow{
+    display: flex;
+    flex-direction: column;
+  }
+  #servicefirstrow .col-6{
+    width: 100%;
+  }
+  #serviceprefresponse{
+    font-size: 14px;
+    padding: 11px;
+  }
+  
+
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card-columns {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-columns {
+    column-count: 1;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+  .card-text {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Custom Styles */
+#main {
+  padding: 40px;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* overflow: hidden; */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  /* border-radius: 50%; */
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.modal-dialog {
+  max-width: 400px;
+}
+
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.modal-body, .modal-footer {
+  padding: 20px;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 15px;
+    max-width: calc(100% - 30px);
+  }
+}
+
+
 :root {
     scroll-behavior: smooth;
   }
@@ -1324,4 +1466,7 @@
   tr{
     font-size: 18px;
     text-align: center;
+  }
+  .fixcontainerheight{
+    height: 90%;
   }

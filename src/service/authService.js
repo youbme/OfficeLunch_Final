@@ -32,12 +32,16 @@ class authservice {
         });
        
         }
-    
-        signupdata(username,email,password){
+        
+        //function for register new account
+        signupdata(username,email,password,role){
             return axios.post(API_URL + "/register",{
                 username,
                 email,
-                password
+                password,
+                role
+            },{
+                
             } )
             .then(response=>{
                 console.log(response.data)
@@ -93,6 +97,20 @@ class authservice {
            })
         }
 
+        getsinglereport(startDateString,token ){
+           const response= axios.get(
+            API_URL + "/single",
+            {
+              date: startDateString,
+            },
+            {
+              headers: {
+                Authorization: "Bearer " + token
+              }
+            }
+          );
+          console.log(response);
+        };
            
              
     
