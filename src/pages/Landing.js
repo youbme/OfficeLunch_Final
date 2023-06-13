@@ -237,8 +237,7 @@ export default function Landing() {
                     <Link>Software Development</Link>
                   </h4>
                   <p>
-                    Provision of structured cabling for data, telecom,
-                    surveillance and fiber cabling
+                  Transforming ideas into powerful, custom-built software solutions that drive innovation and digital transformation
                   </p>
                 </div>
               </div>
@@ -255,8 +254,7 @@ export default function Landing() {
                     <Link>Automation</Link>
                   </h4>
                   <p>
-                    Provision of structured cabling for data, telecom,
-                    surveillance and fiber cabling
+                  Automating repetitive tasks and optimizing workflows to enhance productivity, reduce errors, and unlock new levels of efficiency in your operations
                   </p>
                 </div>
               </div>
