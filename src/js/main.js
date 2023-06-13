@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+
 import Swiper from 'swiper';
 import GLightbox from 'glightbox';
 import Isotope from 'isotope-layout';

@@ -1,16 +1,26 @@
-import {  Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Login from "../pages/Login";
+import PasswordReset from "../pages/PasswordReset";
 
 
 const PrivateRoute = () => {
-  const token = localStorage.getItem("user");
+  let token = localStorage.getItem("user");
   let auth = null;
-  if (!token) {
+
+  let toke = null
+
+  if(token.length <6){
+    toke = true
+  }
+
+
+  if (!token > 6) {
     auth = { token: false };
-  } else {
+  }  {
     auth = { token: true };
   }
 
-  return auth.token ? <Outlet /> : <Login />;
+  return toke ? <PasswordReset /> : auth.token ? <Outlet /> : <Login />;
 };
+
 export default PrivateRoute;

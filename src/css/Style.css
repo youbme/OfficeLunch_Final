@@ -1060,11 +1060,12 @@ section {
   text-align: center;
   color: #fff;
 }
-
+/* //info@accesssystems.com.np */
 .testimonials .testimonial-item .testimonial-img {
-  width: 100px;
-  border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, 0.15);
+  width: 240px;
+  height: 310px;
+  border-radius:70%;
+  /* border: 6px solid rgba(255, 255, 255, 0.15); */
   margin: 0 auto;
 }
 
@@ -1072,12 +1073,12 @@ section {
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #fff;
+  color: white;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #ddd;
+  color: white;
   margin: 0 0 15px 0;
 }
 

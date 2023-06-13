@@ -1,10 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import Profile from "../img/profile-img.jpg";
-import AccessSystem from "../img/Accesssystem.png";
-import authservice from "../service/authservice";
+
 import axios from "axios";
 
 import "../css/Style2.css";
@@ -13,15 +11,14 @@ import "../vendor/bootstrap/css/bootstrap.min.css";
 import "../vendor/bootstrap-icons/bootstrap-icons.css";
 import "../vendor/boxicons/css/boxicons.min.css";
 
-// import '../vendor/quill/quill.bubble.css'
-// import '../vendor/remixicon/remixicon.css'
-// import '../vendor/simple-datatables/style.css'
+
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
 import Gp from "../js/main";
 
+//apiurlendpoint
 const API = process.env.REACT_APP_API_URL;
 export default function Service() {
   // //checkingifloggedinuserisADMIN
@@ -47,11 +44,7 @@ export default function Service() {
   const token = localStorage.getItem("user");
   const usern = localStorage.getItem("username");
 
-  //usestate for signup button dropdown
-  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // const handleDropdownToggle = () => {
-  //   setIsDropdownOpen(!isDropdownOpen);
-  // };
+
 
   //for submit button modal
   const [foodsubmmited, setFoodsubmmited] = useState(false);
@@ -70,13 +63,12 @@ export default function Service() {
       navigate("/service");
       // window.location.reload();
     }
-    //checkingifadminisloggedin
-    // checkRoles();
+   
   }, []);
 
   //load product
   const loadProducts = async () => {
-    const { data: result } = await axios.get(API + "/getall", {
+    const { data: result } = await axios.get(API + "/getAll", {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -94,7 +86,7 @@ export default function Service() {
     setfood(result);
 
     //fetch employees data
-    const { data: employeefood } = await axios.get(API + "/getallUsers", {
+    const { data: employeefood } = await axios.get(API + "/getAllUsers", {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -174,12 +166,7 @@ export default function Service() {
     }, 1000);
   };
 
-  //Signout function
-  // const onSignout = async (e) => {
-  //   e.preventDefault();
-  //   localStorage.clear();
-  //   navigate("/");
-  // };
+ 
 
   return (
     <>

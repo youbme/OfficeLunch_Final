@@ -12,8 +12,9 @@ import RegisterModal from './RegisterModal';
 
 import Gp from "../js/main";
 import { useEffect } from 'react'
+import PasswordResetModal from './PasswordResetModal'
 
-export default function FoodServiceHeader({register, setRegister}) {
+export default function FoodServiceHeader({register, setRegister, pwReset, setpwReset}) {
 
     //navigate
     const navigate = useNavigate();
@@ -127,6 +128,11 @@ useEffect(() => {
                     <hr />
                     </>
                     )}
+                    
+                    <li>
+                      <PasswordResetModal pwReset={pwReset} setpwReset={setpwReset} isDropdownOpen={isDropdownOpen} setIsDropdownOpen={setIsDropdownOpen}/>
+                    </li>
+                    <hr/>
                     <li>
                       <Link
                         className="dropdown-item d-flex align-items-center"

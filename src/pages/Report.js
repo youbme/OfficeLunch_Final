@@ -1,5 +1,5 @@
 import React from "react";
-import Calendar from "react-calendar";
+
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -119,7 +119,7 @@ export default function Report() {
             <div className="col-6">
               <div className="card text-dark  bg-offwhite info-card  ">
                 <div class="card-body ">
-                  <h1 class="card-title">Preference</h1>
+                  <h1 class="card-title">Report</h1>
                   <div class="card-body">
                     <div className="row">
                       <table className="table">
@@ -149,7 +149,7 @@ export default function Report() {
             <div className="col-6">
               <div className=" card text-dark  bg-offwhite ">
                 <div class="card-body ">
-                  <h1 class="card-title">Preference</h1>
+                  <h1 class="card-title">Report</h1>
                   <div>
                  
                   <DropDownCalender setCalendartype={setCalendartype} />

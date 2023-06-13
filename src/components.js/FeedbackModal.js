@@ -1,16 +1,12 @@
 import React from 'react'
-import { Modal,Button } from 'react-bootstrap'
+import { Modal, Button } from 'react-bootstrap'
 
-
-export default function SignupSubmitModal({setOpen, open, signupsubmit, passwordmodal}) {
-
-    
+export default function FeedbackModal({open, setOpen, selectedfeed}) {
 
     const handleClose = () => setOpen(false);
-
   return (
     <>
-    <Modal
+     <Modal
         show={open}
         onHide={handleClose}
         size="md"
@@ -19,13 +15,15 @@ export default function SignupSubmitModal({setOpen, open, signupsubmit, password
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Food Preference
+          {selectedfeed.email}
           </Modal.Title>
+          
+          <span >{selectedfeed.contactDetail}</span>
         </Modal.Header>
         <Modal.Body>
-          {signupsubmit ? "Sucessfully Registered": "Failed to Register" }
+          {selectedfeed.content}
 
-       {passwordmodal ? "Successfully changed": "Failed to change"}
+       
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={handleClose}>OK</Button>

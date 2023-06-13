@@ -1,11 +1,6 @@
 import React from 'react'
-import { Modal,Button } from 'react-bootstrap'
-
-
-export default function SignupSubmitModal({setOpen, open, signupsubmit, passwordmodal}) {
-
-    
-
+import { Modal,Button } from 'react-bootstrap';
+export default function PasswordResetSubmitModal({open, setOpen, passwordmodal}) {
     const handleClose = () => setOpen(false);
 
   return (
@@ -23,7 +18,7 @@ export default function SignupSubmitModal({setOpen, open, signupsubmit, password
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {signupsubmit ? "Sucessfully Registered": "Failed to Register" }
+         
 
        {passwordmodal ? "Successfully changed": "Failed to change"}
         </Modal.Body>

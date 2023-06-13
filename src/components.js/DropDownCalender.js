@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { AiFillCaretDown } from 'react-icons/ai';
 export default function DropDownCalender({setCalendartype}) {
 
-    // const [open, setOpen] = React.useState(false);
+
     const[reporttype, setreporttype]= useState("Single");
 
        
@@ -26,26 +26,14 @@ export default function DropDownCalender({setCalendartype}) {
       <div>
         <select  value={reporttype} onChange={handleOptionChange} >
      
-          {/* <option selected disabled>Select an option</option> */}
+      
           
           <option value="Single">Single</option>
           <option value="Range">Range</option>
           <AiFillCaretDown></AiFillCaretDown>
         </select>
         </div>
-        {/* <p>Selected option: {this.state.selectedOption}</p> */}
-      {/* <button className='forDropbotton' onClick={handleOpen}>Dropdown</button>
-      {open ? (
-        <ul  >
-            
-          <li>
-            <button onClick={handleMenuOne}>Specific Date</button>
-          </li>
-          <li >
-            <button onClick={handleMenuTwo}>Range Date</button>
-          </li>
-        </ul>
-      ) : null} */}
+       
       </div>
 
     </>
