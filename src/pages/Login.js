@@ -150,7 +150,8 @@ export default function Login() {
           {loggedin ? "Logged In Successfully" : "Failed to LogIn"}
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={handleClose}>OK</Button>
+        <Button onClick={handleClose} >OK</Button>
+          {/* <Button onClick={handleClose} >OK</Button> */}
         </Modal.Footer>
       </Modal>
     </>

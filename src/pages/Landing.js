@@ -179,7 +179,7 @@ export default function Landing() {
               >
                 <h3>Overview</h3>
                 <p
-                  style={{ textAlign: "justify", fontSize: 20, width: 550 }}
+                  // style={{ textAlign: "justify", fontSize: 20, width: 550 }}
                   className="fst-italic"
                 >
                   Access Systems is a part of Access Online Inc., a leading
