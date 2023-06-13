@@ -2,7 +2,7 @@ import React from 'react'
 import { Modal,Button } from 'react-bootstrap'
 
 
-export default function SignupSubmitModal({setOpen, open, signupsubmit, passwordmodal}) {
+export default function SignupSubmitModal({setOpen, open, signupsubmit}) {
 
     
 
@@ -25,7 +25,7 @@ export default function SignupSubmitModal({setOpen, open, signupsubmit, password
         <Modal.Body>
           {signupsubmit ? "Sucessfully Registered": "Failed to Register" }
 
-       {passwordmodal ? "Successfully changed": "Failed to change"}
+      
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={handleClose}>OK</Button>

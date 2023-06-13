@@ -231,7 +231,7 @@ export default function Landing() {
               >
                 <div className="icon-box">
                   <div className="icon">
-                  <i class="bi bi-file-code-fill"></i>
+                  <i class="bi bi-file-code"></i>
                   </div>
                   <h4>
                     <Link>Software Development</Link>
