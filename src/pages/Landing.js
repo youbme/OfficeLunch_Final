@@ -231,7 +231,7 @@ export default function Landing() {
               >
                 <div className="icon-box">
                   <div className="icon">
-                    <i class="bi bi-building-gear"></i>
+                  <i class="bi bi-file-code-fill"></i>
                   </div>
                   <h4>
                     <Link>Software Development</Link>
@@ -249,7 +249,7 @@ export default function Landing() {
               >
                 <div className="icon-box">
                   <div className="icon">
-                    <i class="bi bi-building-gear"></i>
+                  <i class="bi bi-boxes"></i>
                   </div>
                   <h4>
                     <Link>Automation</Link>
